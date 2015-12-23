@@ -26,7 +26,7 @@
 	body {
 		-webkit-font-smoothing:antialiased; 
 		-webkit-text-size-adjust:none; 
-		width: 100%!important; 
+		width: 100% !important; 
 		height: 100%;
 	}
 
@@ -56,10 +56,25 @@
 	.callout a {
 		display: inline-block;
 		font-weight:bold;
-		color: #A7A9AC; 
+		color: #231F20; 
 		text-decoration: none;
 		background-color: #ECF8FF;
 		padding: 10px 50px;
+	}
+
+	.news-block-doing-good .callout a {
+		background-color: #D1F0D9;
+	}
+
+	.news-block-just-finished .callout a {
+		background-color: #FFD9D1;
+	}
+
+	.column p.callout {
+		padding: 0;
+	}
+	.column p.callout a {
+		display: block;
 	}
 
 	table.social {
@@ -76,10 +91,10 @@
 		display:block;
 		text-align:center;
 	}
-	a.fb { background-color: #3B5998!important; }
-	a.tw { background-color: #1daced!important; }
-	a.gp { background-color: #DB4A39!important; }
-	a.ms { background-color: #000!important; }
+	a.fb { background-color: #3B5998 !important; }
+	a.tw { background-color: #1daced !important; }
+	a.gp { background-color: #DB4A39 !important; }
+	a.ms { background-color: #000 !important; }
 
 	.sidebar .soc-btn { 
 		display:block;
@@ -106,7 +121,7 @@
 	------------------------------------- */
 	table.footer-wrap { 
 		width: 100%;	
-		clear:both!important;
+		clear:both !important;
 		background: #231F20;
 		color: #fff;
 		font-size: 12px;
@@ -135,10 +150,19 @@
 		display: block;
 		margin: 10px 0;
 	}		
-	.footer-wrap .logo-f {
-		position: absolute;
-		top: -25px;
-		right: 0;
+	.footer-f {
+		margin-top: 40px;
+		border-bottom: 25px solid #231F20;
+	}
+	.footer-f .wrap {
+		width: 600px;
+		margin: 0 auto;
+		text-align: right;
+	}
+	.footer-f img {
+		display: inline-block;
+		margin: 0 auto;
+		margin-bottom: -25px;
 		width: 50px;
 		height: 50px;
 	}
@@ -157,11 +181,11 @@
 	}
 	h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
 
-	h1 { font-weight:200; font-size: 30px;}
+	h1 { font-weight:200; font-size: 28px;}
 	h2 { font-weight:200; font-size: 20px;}
 	h3 { font-weight:700; font-size: 12px; color: #A7A9AC; letter-spacing: .2em; text-transform: uppercase; }
 
-	.collapse { margin:0!important;}
+	.collapse { margin:0 !important;}
 
 	p, ul { 
 		margin-bottom: 10px; 
@@ -200,7 +224,7 @@
 		margin:0;
 	}
 	ul.sidebar li a.last { border-bottom-width:0px;}
-	ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+	ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0 !important;}
 
 
 
@@ -211,44 +235,44 @@
 
 	/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
 	.container {
-		display:block!important;
-		max-width:600px!important;
-		margin:0 auto!important; /* makes it centered */
-		clear:both!important;
+		display:block !important;
+		max-width:600px !important;
+		margin:0 auto !important; /* makes it centered */
+		clear:both !important;
 	}
-
+	.padded {
+		margin: 0 35px; 	
+	}
 	.header {
-		display:block!important;
-		max-width:600px!important;
-		margin:0 auto!important; /* makes it centered */
-		padding:35px!important; /* makes it centered */
-		clear:both!important;
+		display:block !important;
+		max-width:600px !important;
+		margin:0 auto !important; /* makes it centered */
+		padding:35px !important; /* makes it centered */
+		clear:both !important;
 		font-size: 10px;
 		line-height: 1.6em;
 	}
 	.section-header {
 		border-bottom: 1px solid #A7A9AC;
-		line-height: 20px;
-		padding-bottom: 8px;
+		margin-bottom: 20px;
+		padding-bottom: 3px;
 	}
-	.section-copy {
-
+	.section-header h3 {
+		font-size: 10px;
+		margin: 0;
+	}
+	.column .section-copy tr td {
+		padding: 0 35px 0 15px;
 	}
 	.section-copy h1 {
 		font-weight: 700;
 		text-align: center;
 		margin: 0 0 30px;
 	}
-	.section-header {
-		margin-bottom: 20px;
-	}
-	.section-header h3 {
-		margin: 0;
-	}
 	.share {
 		color: #A7A9AC;
 		font-size: 10px;
-		letter-spacing: .1em;
+		letter-spacing: .2em;
 		text-align: right;
 	}
 	.share a img {
@@ -275,11 +299,13 @@
 		width: 300px;
 		float:left;
 	}
-	.column .section-copy tr td { padding: 15px; }
+	.column .section-copy tr td {
+		/*padding: 15px;*/
+	}
 	.column-wrap { 
-		padding:0!important; 
+		padding:0 !important; 
 		margin:0 auto; 
-		max-width:600px!important;
+		max-width:600px !important;
 	}
 	.column table { width:100%;}
 	.social .column {
@@ -299,17 +325,19 @@
 	-------------------------------------------- */
 	@media only screen and (max-width: 600px) {
 		
-		a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+		a[class="btn"] { display:block !important; margin-bottom:10px !important; background-image:none !important; margin-right:0 !important;}
 
-		div[class="column"] { width: auto!important; float:none!important;}
-		div[class="header"] { padding:0!important;}
+		div[class="column"] { width: auto !important; float:none !important;}
+		div[class="header"] { padding:0 !important;}
 		.footer-social,
-		.footer-wrap div[class="column"] { text-align:center!important; margin: 20px 0;}
-		.footer-wrap .logo-f { display: none; }
-		.footer-wrap .logo { margin: 10px auto!important;}
+		.footer-wrap div[class="column"] { text-align:center !important; margin: 20px 0;}
+		.footer-wrap .logo { margin: 10px auto !important;}
 		table.social div[class="column"] {
-			width:auto!important;
+			width:auto !important;
 		}
+		.padded { margin:0 !important; }
+		.footer-wrap .endash { margin: 10px auto !important; }
+		.footer-f .wrap { text-align: center !important; width: 100% !important;}
 
 	}
 </style>	
@@ -341,101 +369,170 @@
 				</table>
 			</div>
 			
-			<!-- content -->
-			<div class="content">
-				<table>
-					<tr>
-						<td>
-							<p><img src="img/test-image.jpg" /></p>
-						</td>
-					</tr>
-				</table>
-				<table class="section-header">
-					<tr>
-						<td width="50%">
-							<h3>JUST FINISHED</h3>
-						</td>
-						<td width="50%" class="share">
-							SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
-						</td>
-					</tr>
-				</table>
-				<table class="section-copy">
-					<tr>
-						<td>
-							<h1>Dollop Coffee & Tea</h1>
-							<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
-
-							<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
-
-							<p class="callout">
-								<a href="#">Call to Action Would Go Here</a>
-							</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-	
-
-			<div class="content">
-				<table class="section-header">
-					<tr>
-						<td width="50%">
-							<h3>IN THE WORKS</h3>
-						</td>
-						<td width="50%" class="share">
-							SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
-						</td>
-					</tr>
-				</table>
-			</div>
-
-			<!-- COLUMN WRAP -->
-			<div class="column-wrap">
-			
-				<div class="column">
-					<table align="left">
-						<tr>
-							<td>				
-								<img src="img/test-image.jpg" />
-							</td>
-						</tr>
-					</table>
-				</div>
-			
-				<div class="column">
-					<table align="left" class="section-copy">
+			<!-- START repeatable JUST FINISHED-->
+			<div class="news-block-just-finished" mc:repeatable="news_block" mc:variant="JUST FINISHED">
+				<div class="content">
+					<table>
 						<tr>
 							<td>
-								<h1>One Line Headline</h1>
-
-								<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
-
-								<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
-
-								<p class="callout">
-									<a href="#">This is a call to action!</a>
-								</p>
+								<p><img mc:edit="just-finished-image" src="img/test-image.jpg" /></p>
 							</td>
 						</tr>
 					</table>
-				</div>
-				
-				<div class="clear"></div>			
+					<div class="padded">
+						<table class="section-header">
+							<tr>
+								<td width="50%">
+									<h3>JUST FINISHED</h3>
+								</td>
+								<td width="50%" class="share">
+									SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
+								</td>
+							</tr>
+						</table>
+						<table class="section-copy">
+							<tr>
+								<td mc:edit="just-finished-copy">
+									<h1>Dollop Coffee & Tea</h1>
+									<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
 
-			</div><!-- /COLUMN WRAP -->	
+									<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
+
+									<p class="callout">
+										<a href="#">Call to Action Would Go Here</a>
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- END repeatable JUST FINISHED-->
+	
+
+			<!-- START repeatable IN THE WORKS-->
+			<div class="news-block-in-the-works" mc:repeatable="news_block" mc:variant="IN THE WORKS">
+				<div class="padded">
+					<div class="content">
+						<table class="section-header">
+							<tr>
+								<td width="50%">
+									<h3>IN THE WORKS</h3>
+								</td>
+								<td width="50%" class="share">
+									SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<!-- COLUMN WRAP -->
+				<div class="column-wrap">
+				
+					<div class="column">
+						<table align="left">
+							<tr>
+								<td>				
+									<img mc:edit="in-the-works-image" src="img/test-image.jpg" />
+								</td>
+							</tr>
+						</table>
+					</div>
+				
+					<div class="column">
+						<table align="left" class="section-copy">
+							<tr>
+								<td mc:edit="in-the-works-copy">
+									<h1>One Line Headline</h1>
+
+									<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
+
+									<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
+
+									<p class="callout">
+										<a href="#">This is a call to action!</a>
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="clear"></div>			
+
+				</div><!-- /COLUMN WRAP -->	
+			</div>
+			<!-- END repeatable IN THE WORKS -->
 			
+			<!-- START repeatable DOING GOOD-->
+			<div class="news-block-doing-good" mc:repeatable="news_block" mc:variant="DOING GOOD">
+				<div class="padded">
+					<div class="content">
+						<table class="section-header">
+							<tr>
+								<td width="50%">
+									<h3>DOING GOOD</h3>
+								</td>
+								<td width="50%" class="share">
+									SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<!-- COLUMN WRAP -->
+				<div class="column-wrap">
+				
+					<div class="column">
+						<table align="left">
+							<tr>
+								<td>				
+									<img mc:edit="doing-good-image" src="img/test-image.jpg" />
+								</td>
+							</tr>
+						</table>
+					</div>
+				
+					<div class="column">
+						<table align="left" class="section-copy">
+							<tr>
+								<td mc:edit="doing-good-copy">
+									<h1>One Line Headline</h1>
+
+									<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
+
+									<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
+
+									<p class="callout">
+										<a href="#">This is a call to action!</a>
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="clear"></div>			
+
+				</div><!-- /COLUMN WRAP -->	
+			</div><!-- END repeatable IN THE WORKS -->
+
 		</td>
 		<td></td>
 	</tr>
 </table>
 
 <!-- FOOTER -->
+<div class="footer-f">
+	<div class="wrap">
+		<img src="img/footer-logo-f@4x.png" class="logo-f">
+	</div>
+</div>
 <table class="footer-wrap">
 	<tr>
 		<td></td>
 		<td class="container">
-				
+
 			<!-- COLUMN WRAP -->
 			<div class="column-wrap">
 			
@@ -449,6 +546,7 @@
 								<a href="mailto:info@firebellydesign.com">INFO@FIREBELLYDESIGN.COM</a><br>
 								773 489 3200<br>
 								*|UNSUB|*
+								*|REWARDS|*
 							</td>
 						</tr>
 					</table>
@@ -458,7 +556,6 @@
 					<table align="right" class="footer-social">
 						<tr>
 							<td>
-								<img src="img/footer-logo-f@4x.png" class="logo-f">
 								<a href="#"><strong>firebellydesign.com</strong></a><br>
 								<a href="#">SHARE WITH A FRIEND</a><br>
 								<a href="#">FACEBOOK</a><br>
