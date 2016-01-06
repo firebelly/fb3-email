@@ -14,7 +14,9 @@
 		margin:0;
 		padding:0;
 	}
-	* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+	* {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
 
 	img { 
 		max-width: 100%; 
@@ -26,7 +28,7 @@
 	body {
 		-webkit-font-smoothing:antialiased; 
 		-webkit-text-size-adjust:none; 
-		width: 100% !important; 
+		width: 100% ; 
 		height: 100%;
 	}
 
@@ -36,38 +38,35 @@
 	------------------------------------- */
 	a { color: #A7A9AC; text-decoration: none;}
 
-	.btn {
-		text-decoration:none;
-		color: #FFF;
-		background-color: #666;
-		padding:10px 16px;
-		font-weight:bold;
-		margin-right:10px;
-		text-align:center;
-		cursor:pointer;
-		display: inline-block;
-	}
-
 	p.callout {
 		padding:15px;
 		margin-bottom: 15px;
 		text-align: center;
 	}
-	.callout a {
+
+	p.callout a {
 		display: inline-block;
 		font-weight:bold;
 		color: #231F20; 
 		text-decoration: none;
-		background-color: #ECF8FF;
+		background-color: #fed9d2;
 		padding: 10px 50px;
 	}
 
-	.news-block-doing-good .callout a {
-		background-color: #D1F0D9;
+	.news-block-in-the-works p.callout a {
+		background-color: #dee6fe;
 	}
 
-	.news-block-just-finished .callout a {
-		background-color: #FFD9D1;
+	.news-block-doing-good p.callout a {
+		background-color: #fee5c1;
+	}
+
+	.news-block-doing-good p.callout a {
+		background-color: #d2efd9;
+	}
+
+	.news-block-just-finished p.callout a {
+		background-color: #fee5c1;
 	}
 
 	.column p.callout {
@@ -75,30 +74,6 @@
 	}
 	.column p.callout a {
 		display: block;
-	}
-
-	table.social {
-	/* 	padding:15px; */
-		background-color: #ebebeb;
-		
-	}
-	.social .soc-btn {
-		padding: 3px 7px;
-		font-size:12px;
-		margin-bottom:10px;
-		text-decoration:none;
-		color: #FFF;font-weight:bold;
-		display:block;
-		text-align:center;
-	}
-	a.fb { background-color: #3B5998 !important; }
-	a.tw { background-color: #1daced !important; }
-	a.gp { background-color: #DB4A39 !important; }
-	a.ms { background-color: #000 !important; }
-
-	.sidebar .soc-btn { 
-		display:block;
-		width:100%;
 	}
 
 	/* ------------------------------------- 
@@ -113,15 +88,15 @@
 	/* ------------------------------------- 
 			BODY 
 	------------------------------------- */
-	table.body-wrap { width: 100%;}
+	table.body-wrap { width: 100%; }
 
 
 	/* ------------------------------------- 
 			FOOTER 
 	------------------------------------- */
-	table.footer-wrap { 
+	table.footer-wrap {
 		width: 100%;	
-		clear:both !important;
+		clear:both ;
 		background: #231F20;
 		color: #fff;
 		font-size: 12px;
@@ -131,18 +106,9 @@
 	.footer-wrap a {
 		color: #fff;
 	}
-	.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
-	.footer-wrap .container td.content p {
-		font-size:10px;
-		font-weight: bold;
-		
-	}
 	.footer-wrap .container {
-		padding: 55px 0 150px;
+		padding: 25px 0 150px;
 		position: relative;
-	}
-	.footer-social {
-		text-align: right;
 	}
 	.footer-wrap .endash {
 		width: 14px;
@@ -150,12 +116,19 @@
 		display: block;
 		margin: 10px 0;
 	}		
+	.footer-wrap .logo {
+		width: 75px;
+		height: 21px;
+		display: block;
+	}
 	.footer-f {
-		margin-top: 40px;
-		border-bottom: 25px solid #231F20;
+		display: none;
+		height: 50px;
+		width: 100%;
 	}
 	.footer-f .wrap {
 		width: 600px;
+		height: 75px;
 		margin: 0 auto;
 		text-align: right;
 	}
@@ -166,26 +139,28 @@
 		width: 50px;
 		height: 50px;
 	}
-	.footer-wrap .logo {
-		width: 75px;
-		height: 21px;
-		display: block;
-		margin-bottom: 10px;
-	}
 
 	/* ------------------------------------- 
 			TYPOGRAPHY 
 	------------------------------------- */
-	h1,h2,h3,h4,h5,h6 {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:231F20;
+	h1,h2,h3,h4,h5 {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		line-height: 1.1;
+		margin-bottom:15px;
+		color:231F20;
 	}
-	h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
 
 	h1 { font-weight:200; font-size: 28px;}
 	h2 { font-weight:200; font-size: 20px;}
-	h3 { font-weight:700; font-size: 12px; color: #A7A9AC; letter-spacing: .2em; text-transform: uppercase; }
+	h3 {
+		font-weight:700;
+		font-size: 12px;
+		color: #A7A9AC;
+		letter-spacing: .2em;
+		text-transform: uppercase;
+	}
 
-	.collapse { margin:0 !important;}
+	.collapse { margin:0 ;}
 
 	p, ul { 
 		margin-bottom: 10px; 
@@ -202,67 +177,37 @@
 	}
 
 	/* ------------------------------------- 
-			SIDEBAR 
+			STRUCTURE
 	------------------------------------- */
-	ul.sidebar {
-		background:#ebebeb;
-		display:block;
-		list-style-type: none;
-	}
-	ul.sidebar li { display: block; margin:0;}
-	ul.sidebar li a {
-		text-decoration:none;
-		color: #666;
-		padding:10px 16px;
-	/* 	font-weight:bold; */
-		margin-right:10px;
-	/* 	text-align:center; */
-		cursor:pointer;
-		border-bottom: 1px solid #777777;
-		border-top: 1px solid #FFFFFF;
-		display:block;
-		margin:0;
-	}
-	ul.sidebar li a.last { border-bottom-width:0px;}
-	ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0 !important;}
 
-
-
-	/* --------------------------------------------------- 
-			RESPONSIVENESS
-			Nuke it from orbit. It's the only way to be sure. 
-	------------------------------------------------------ */
-
-	/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
 	.container {
-		display:block !important;
-		max-width:600px !important;
-		margin:0 auto !important; /* makes it centered */
-		clear:both !important;
-	}
-	.padded {
-		margin: 0 35px; 	
+		display:block ;
+		max-width:600px ;
+		margin:0 auto ;
+		clear:both ;
 	}
 	.header {
-		display:block !important;
-		max-width:600px !important;
-		margin:0 auto !important; /* makes it centered */
-		padding:35px !important; /* makes it centered */
-		clear:both !important;
-		font-size: 10px;
+		display:block ;
+		max-width:600px ;
+		margin:0 auto ;
+		padding:20px 0 ;
+		clear:both ;
+		font-size: 12px;
+		letter-spacing: .2em;
 		line-height: 1.6em;
 	}
 	.section-header {
 		border-bottom: 1px solid #A7A9AC;
+		margin-top: 20px;
 		margin-bottom: 20px;
 		padding-bottom: 3px;
-	}
-	.section-header h3 {
-		font-size: 10px;
-		margin: 0;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: .2em;
+		line-height: 1.6em;
 	}
 	.column .section-copy tr td {
-		padding: 0 35px 0 15px;
+		padding: 0 0 0 15px;
 	}
 	.section-copy h1 {
 		font-weight: 700;
@@ -281,63 +226,83 @@
 		vertical-align: middle;
 	}
 
-
-	/* This should also be a block element, so that it will fill 100% of the .container */
 	.content {
 		max-width:600px;
 		margin:0 auto;
 		display:block; 
 	}
 
-	/* Let's make sure tables in the content area are 100% wide */
 	.header table,
 	.content table { width: 100%; }
-
-
-	/* Odds and ends */
-	.column {
-		width: 300px;
-		float:left;
-	}
-	.column .section-copy tr td {
-		/*padding: 15px;*/
-	}
-	.column-wrap { 
-		padding:0 !important; 
-		margin:0 auto; 
-		max-width:600px !important;
-	}
+	
 	.column table { width:100%;}
-	.social .column {
-		width: 280px;
-		min-width: 279px;
-		float:left;
-	}
 
 	/* Be sure to place a .clear element after each set of columns, just to be safe */
 	.clear { display: block; clear: both; }
 
+	.column {
+		width: auto ;
+		float: none ;
+	}
+	.column-wrap .section-copy h1 {
+		margin-top: 20px ;
+	}
 
-	/* ------------------------------------------- 
-			PHONE
-			For clients that support media queries.
-			Nothing fancy. 
-	-------------------------------------------- */
-	@media only screen and (max-width: 600px) {
-		
-		a[class="btn"] { display:block !important; margin-bottom:10px !important; background-image:none !important; margin-right:0 !important;}
+	.footer-social,
+	.footer-wrap .column {
+		text-align:center ;
+		margin: 20px 0 ;
+	}
+	.footer-wrap .logo,
+	.footer-wrap .endash {
+		margin: 10px auto ;
+	}
+	.footer-f .wrap {
+		text-align: center ;
+		width: 100% ;
+	}
+	.header-social a {
+		display: none;
+	}
 
-		div[class="column"] { width: auto !important; float:none !important;}
-		div[class="header"] { padding:0 !important;}
-		.footer-social,
-		.footer-wrap div[class="column"] { text-align:center !important; margin: 20px 0;}
-		.footer-wrap .logo { margin: 10px auto !important;}
-		table.social div[class="column"] {
-			width:auto !important;
+	/* ----------------------------------------
+			For clients that support media queries 
+	------------------------------------------- */
+	@media only screen and (min-width: 600px) {
+		.header-social a {
+			display: block !important;
 		}
-		.padded { margin:0 !important; }
-		.footer-wrap .endash { margin: 10px auto !important; }
-		.footer-f .wrap { text-align: center !important; width: 100% !important;}
+		.column {
+			width: 300px !important;
+			float:left !important;
+		}
+		.column-wrap { 
+			padding:0 !important; 
+			margin:0 auto !important; 
+			max-width:600px !important;
+		}
+		.column-wrap .section-copy h1 {
+			margin-top: 0 !important;
+		}
+		.footer-f {
+			display: table;
+		}
+		.footer-f .wrap {
+			width: 600px !important;
+			text-align:right !important;
+		}
+		.footer-social {
+			text-align: right !important;
+			margin: 0 !important;
+		}
+		.footer-wrap .column {
+			text-align: left !important;
+			margin: 0 !important;
+		}
+		.footer-wrap .logo,
+		.footer-wrap .endash {
+			margin: 0 0 10px 0 !important;
+		}
 
 	}
 </style>	
@@ -356,14 +321,14 @@
 			<div class="header">
 				<table>
 					<tr>
-						<td width="75%">
-							<img src="img/header@4x.png" style="width: 232px; height: 80px;">	
+						<td class="header-logo">
+							<a target="_blank" href="http://www.firebellydesign.com/work"><img src="img/header@4x.png" style="width: 232px; height: auto;" alt="GoodNews from Firebelly"></a>
 						</td>
-						<td width="25%" style="text-align:right;">
-							<a href="#">FACEBOOK</a><br>
-							<a href="#">TWITTER</a><br>
-							<a href="#">INSTAGRAM</a><br>
-							<a href="#">WEBSITE</a><br>
+						<td class="header-social" align="right">
+							<a target="_blank" href="https://www.facebook.com/firebellydesign">FACEBOOK</a>
+							<a target="_blank" href="https://twitter.com/firebellydesign">TWITTER</a>
+							<a target="_blank" href="https://www.instagram.com/firebellydesign/">INSTAGRAM</a>
+							<a target="_blank" href="http://www.firebellydesign.com/work">WEB</a>
 						</td>
 					</tr>
 				</table>
@@ -379,32 +344,27 @@
 							</td>
 						</tr>
 					</table>
-					<div class="padded">
-						<table class="section-header">
-							<tr>
-								<td width="50%">
-									<h3>JUST FINISHED</h3>
-								</td>
-								<td width="50%" class="share">
-									SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
-								</td>
-							</tr>
-						</table>
-						<table class="section-copy">
-							<tr>
-								<td mc:edit="just-finished-copy">
-									<h1>Dollop Coffee & Tea</h1>
-									<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
+					<table class="section-header">
+						<tr>
+							<td>
+								JUST FINISHED
+							</td>
+						</tr>
+					</table>
+					<table class="section-copy">
+						<tr>
+							<td mc:edit="just-finished-copy">
+								<h1>Dollop Coffee & Tea</h1>
+								<p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
 
-									<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
+								<p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
 
-									<p class="callout">
-										<a href="#">Call to Action Would Go Here</a>
-									</p>
-								</td>
-							</tr>
-						</table>
-					</div>
+								<p class="callout">
+									<a href="#">Call to Action Would Go Here</a>
+								</p>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			<!-- END repeatable JUST FINISHED-->
@@ -412,19 +372,14 @@
 
 			<!-- START repeatable IN THE WORKS-->
 			<div class="news-block-in-the-works" mc:repeatable="news_block" mc:variant="IN THE WORKS">
-				<div class="padded">
-					<div class="content">
-						<table class="section-header">
-							<tr>
-								<td width="50%">
-									<h3>IN THE WORKS</h3>
-								</td>
-								<td width="50%" class="share">
-									SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
-								</td>
-							</tr>
-						</table>
-					</div>
+				<div class="content">
+					<table class="section-header">
+						<tr>
+							<td>
+								IN THE WORKS
+							</td>
+						</tr>
+					</table>
 				</div>
 
 				<!-- COLUMN WRAP -->
@@ -466,19 +421,14 @@
 			
 			<!-- START repeatable DOING GOOD-->
 			<div class="news-block-doing-good" mc:repeatable="news_block" mc:variant="DOING GOOD">
-				<div class="padded">
-					<div class="content">
-						<table class="section-header">
-							<tr>
-								<td width="50%">
-									<h3>DOING GOOD</h3>
-								</td>
-								<td width="50%" class="share">
-									SHARE <a href="#"><img src="img/twitter.png"></a> <a href="#"><img src="img/facebook.png"></a> <a href="#"><img src="img/pinterest.png"></a>
-								</td>
-							</tr>
-						</table>
-					</div>
+				<div class="content">
+					<table class="section-header">
+						<tr>
+							<td>
+								DOING GOOD
+							</td>
+						</tr>
+					</table>
 				</div>
 
 				<!-- COLUMN WRAP -->
@@ -523,11 +473,17 @@
 </table>
 
 <!-- FOOTER -->
-<div class="footer-f">
-	<div class="wrap">
-		<img src="img/footer-logo-f@4x.png" class="logo-f">
-	</div>
-</div>
+<table class="footer-f" background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAABkCAIAAADVI9l0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTI4NTAxNjRBQjY1MTFFNUFDODhCNkQ3MDUyMEE1QkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTI4NTAxNjVBQjY1MTFFNUFDODhCNkQ3MDUyMEE1QkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMjg1MDE2MkFCNjUxMUU1QUM4OEI2RDcwNTIwQTVCQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMjg1MDE2M0FCNjUxMUU1QUM4OEI2RDcwNTIwQTVCQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkvEo6AAAAFUSURBVHja7NfBCQAgEANBFQtRsP8Wcx+xCWdKyGdJT9IA4FfDBAAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQAIIQBc86xtBQA8QgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgAQQgB4SoABABvPBCyJRxcxAAAAAElFTkSuQmCC">
+	<tr>
+		<td align="center">
+			<table class="wrap">
+			<tr><td>
+				<img src="img/footer-logo-f@4x.png" class="logo-f">
+			</td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
 <table class="footer-wrap">
 	<tr>
 		<td></td>
@@ -542,11 +498,9 @@
 							<td>
 								<img src="img/footer-logo@4x.png" alt="Firebelly" class="logo">
 								<img src="img/endash.png" class="endash">
-								2701 W THOMAS ST. CHICAGO IL 60622<br>
-								<a href="mailto:info@firebellydesign.com">INFO@FIREBELLYDESIGN.COM</a><br>
-								773 489 3200<br>
-								*|UNSUB|*
-								*|REWARDS|*
+								<a target="_blank" href="https://goo.gl/maps/im4YsDbLnFH2">2701 W THOMAS ST<br> CHICAGO IL 60622</a><br>
+								<a target="_blank" href="mailto:info@firebellydesign.com">INFO@FIREBELLYDESIGN.COM</a><br>
+								<a target="_blank" href="tel:7734893200">773 489 3200</a><br>
 							</td>
 						</tr>
 					</table>
@@ -556,11 +510,15 @@
 					<table align="right" class="footer-social">
 						<tr>
 							<td>
-								<a href="#"><strong>firebellydesign.com</strong></a><br>
-								<a href="#">SHARE WITH A FRIEND</a><br>
-								<a href="#">FACEBOOK</a><br>
-								<a href="#">TWITTER</a><br>
-								<a href="#">INSTAGRAM</a>
+								<a target="_blank" href="http://www.firebellydesign.com/work"><strong>firebellydesign.com</strong></a><br>
+								<a target="_blank" href="https://www.facebook.com/firebellydesign">FACEBOOK</a><br>
+								<a target="_blank" href="https://twitter.com/firebellydesign">TWITTER</a><br>
+								<a target="_blank" href="https://www.instagram.com/firebellydesign/">INSTAGRAM</a><br><br>
+								SHARE <a target="_blank" href="*|SHARELINK:TWITTER|*"><img style="width: 20px;" src="img/twitter.png" alt="Twitter" /></a>
+								<a target="_blank" href="*|SHARELINK:FACEBOOK|*"><img style="width: 20px;" src="img/facebook.png" alt="Facebook" /></a>
+								<a target="_blank" href="*|FORWARD|*"><img style="width: 20px;" src="img/email.png" alt="Email" /></a><br>
+								<br><a href="*|UNSUB|*">UNSUBSCRIBE</a><br>
+								*|REWARDS|*
 							</td>
 						</tr>
 					</table>
@@ -569,7 +527,6 @@
 				<div class="clear"></div>			
 
 			</div><!-- /COLUMN WRAP -->	
-
 
 		</td>
 		<td></td>
