@@ -7,10 +7,10 @@
 <title>Firebelly</title>
 
 <style>
-	/* ------------------------------------- 
-			GLOBAL 
+	/* -------------------------------------
+			GLOBAL
 	------------------------------------- */
-	* { 
+	* {
 		margin:0;
 		padding:0;
 	}
@@ -18,23 +18,26 @@
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
-	img { 
-		max-width: 100%; 
+	img {
+		max-width: 100%;
 	}
 	body {
-		-webkit-font-smoothing:antialiased; 
-		-webkit-text-size-adjust:none; 
-		width: 100%; 
+		-webkit-font-smoothing:antialiased;
+		-webkit-text-size-adjust:none;
+		width: 100%;
 		height: 100%;
+		color:#232323;
+		background:#f2f2f0;
 	}
 
 
-	/* ------------------------------------- 
-			ELEMENTS 
+	/* -------------------------------------
+			ELEMENTS
 	------------------------------------- */
-	a {
-		color: #A7A9AC;
-		text-decoration: none;
+	p a {
+		font-weight:bold;
+		color: #ff3d00;
+		text-decoration: underline;
 	}
 
 	/* Call to action buttons */
@@ -46,9 +49,9 @@
 	p.callout a {
 		display: inline-block;
 		font-weight:bold;
-		color: #231F20; 
+		color: #ffffff;
 		text-decoration: none;
-		background-color: #fed9d2;
+		background-color: #ff3d00;
 		padding: 10px 50px;
 	}
 
@@ -60,50 +63,29 @@
 		display: block;
 	}
 
-	/* ------------------------------------- 
-			Repeatable blocks 
+	/* Spacer TD */
+	.spacer {
+		display:block;
+		margin-top:30px;
+	}
+
+	/* -------------------------------------
+			Repeatable blocks
 	------------------------------------- */
 
-	/* In The Works */
-	.news-block-in-the-works a {
-		color: #9999ff;
-	}
-	.news-block-in-the-works p.callout a {
-		background-color: #dee6fe;
-		color: #231F20; 
-	}
-	/* Around Town */
-	.news-block-around-town a {
-		color: #ff9999;
-	}
-	.news-block-around-town p.callout a {
-		background-color: #fed9d2;
-		color: #231F20; 
-	}
-	/* Doing Good */
-	.news-block-doing-good a {
-		color: #66cc99;
-	}
-	.news-block-doing-good p.callout a {
-		background-color: #d2efd9;
-		color: #231F20; 
-	}
-	/* Just Finished */
-	.news-block-just-finished a {
-		color: #ff9999;
-	}
-	.news-block-just-finished p.callout a {
-		background-color: #fee5c1;
-		color: #231F20; 
-	}
 
 	.news-block-just-finished,
 	.news-block-around-town {
 		margin-top: 20px;
 	}
 
-	/* ------------------------------------- 
-			HEADER 
+	.news-block-in-the-works h1,
+	.news-block-doing-good h1 {
+		text-align:left!important;
+	}
+
+	/* -------------------------------------
+			HEADER
 	------------------------------------- */
 	table.head-wrap {
 		width: 100%;
@@ -113,20 +95,27 @@
 		padding: 15px;
 	}
 
+	.header-social a {
+		color:#232323;
+		text-decoration:none!important;
+	}
+	.header-social a:hover {
+		text-decoration:underline!important;
+	}
 
-	/* ------------------------------------- 
-			BODY 
+	/* -------------------------------------
+			BODY
 	------------------------------------- */
 	table.body-wrap { width: 100%; }
 
 
-	/* ------------------------------------- 
-			FOOTER 
+	/* -------------------------------------
+			FOOTER
 	------------------------------------- */
 	table.footer-wrap {
-		width: 100%;	
+		width: 100%;
 		clear:both;
-		background: #231F20;
+		background: #232323;
 		color: #FFFFFF;
 		font-size: 12px;
 		letter-spacing: .2em;
@@ -137,6 +126,10 @@
 		font-size: 12px;
 		letter-spacing: .2em;
 		line-height: 2em;
+		text-decoration:none!important;
+	}
+	.footer-wrap a:hover {
+		text-decoration:underline!important;
 	}
 	.footer-wrap .container {
 		padding: 25px 0 150px;
@@ -147,10 +140,10 @@
 		height: 22px;
 		display: block;
 		margin: 10px 0;
-	}		
+	}
 	.footer-wrap .logo {
-		width: 75px;
-		height: 21px;
+		width: 132px;
+		height: 43px;
 		display: block;
 	}
 	table.footer-f {
@@ -180,14 +173,14 @@
 	}
 
 
-	/* ------------------------------------- 
-			TYPOGRAPHY 
+	/* -------------------------------------
+			TYPOGRAPHY
 	------------------------------------- */
 	h1,h2,h3,h4,h5 {
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		line-height: 1.1;
 		margin-bottom: 15px;
-		color: #231F20;
+		color: #232323;
 	}
 	h1 {
 		font-weight:200;
@@ -204,10 +197,10 @@
 		letter-spacing: .2em;
 		text-transform: uppercase;
 	}
-	p, ul { 
-		margin-bottom: 10px; 
-		font-weight: normal; 
-		font-size: 14px; 
+	p, ul {
+		margin-bottom: 10px;
+		font-weight: normal;
+		font-size: 16px;
 		line-height: 1.6;
 	}
 	ul li {
@@ -215,7 +208,7 @@
 		list-style-position: inside;
 	}
 
-	/* ------------------------------------- 
+	/* -------------------------------------
 			STRUCTURE
 	------------------------------------- */
 
@@ -233,11 +226,11 @@
 		clear:both;
 	}
 	.section-header {
-		border-bottom: 1px solid #A7A9AC;
+		border-bottom: 1px solid #232323;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		padding-bottom: 3px;
-		color: #a7a9ac;
+		color: #232323;
 		font-size: 12px;
 		font-weight: 700;
 		letter-spacing: .2em;
@@ -254,7 +247,7 @@
 	.content {
 		max-width:600px;
 		margin:0 auto;
-		display:block; 
+		display:block;
 	}
 	.header table,
 	.column table,
@@ -281,7 +274,7 @@
 	}
 
 	/* ----------------------------------------
-			For clients that support media queries 
+			For clients that support media queries
 	------------------------------------------- */
 	@media only screen and (min-width: 600px) {
 		.header-social a {
@@ -291,9 +284,9 @@
 			width: 300px!important;
 			float: left!important;
 		}
-		.column-wrap { 
-			padding: 0!important; 
-			margin: 0 auto!important; 
+		.column-wrap {
+			padding: 0!important;
+			margin: 0 auto!important;
 			max-width: 600px!important;
 		}
 		.column-wrap .section-copy h1 {
@@ -320,42 +313,43 @@
 		}
 
 	}
-</style>	
+</style>
 
 </head>
- 
-<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<body bgcolor="#f2f2f0" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
 
 <!-- BODY -->
 <table class="body-wrap">
 	<tr>
 		<td></td>
-		<td class="container" bgcolor="#FFFFFF">
-			
+		<td class="container" bgcolor="#f2f2f0">
+
 			<!-- header -->
 			<div class="header">
 				<table>
 					<tr>
 						<td class="header-logo">
-							<a target="_blank" href="http://www.firebellydesign.com/work"><img src="img/header@4x.png" style="width: 232px; height: auto;" alt="GoodNews from Firebelly"></a>
+							<a target="_blank" href="http://www.firebellydesign.com/work"><img src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/62b3c092-a563-44fa-8b87-a3369f71bc31.png" style="width: 232px; height: auto;" alt="GoodNews from Firebelly"></a>
 						</td>
 						<td class="header-social" align="right">
-							<a target="_blank" href="https://www.facebook.com/firebellydesign">FACEBOOK</a><br>
-							<a target="_blank" href="https://twitter.com/firebellydesign">TWITTER</a><br>
-							<a target="_blank" href="https://www.instagram.com/firebellydesign/">INSTAGRAM</a><br>
-							<a target="_blank" href="http://www.firebellydesign.com/work">WEB</a>
+						  <ul style="margin:0;padding:0;list-style:none;">
+						    <li style="margin:0;padding:0;list-style:none;">
+						      <a target="_blank" href="*|LIST:SUBSCRIBE|*">SUBSCRIBE</a>
+						    </li>
+						  </ul>
 						</td>
 					</tr>
 				</table>
 			</div>
-			
+
 			<!-- START repeatable JUST FINISHED-->
 			<div class="news-block-just-finished" mc:repeatable="news_block" mc:variant="JUST FINISHED">
 				<div class="content">
 					<table>
 						<tr>
 							<td>
-								<p><img mc:edit="just-finished-image" src="img/test-image.jpg" /></p>
+								<p><img mc:edit="just-finished-image" src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" alt="27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" mc:edit="congratulationsimage" /></p>
 							</td>
 						</tr>
 					</table>
@@ -383,7 +377,7 @@
 				</div>
 			</div>
 			<!-- END repeatable JUST FINISHED-->
-	
+
 
 			<!-- START repeatable IN THE WORKS-->
 			<div class="news-block-in-the-works" mc:repeatable="news_block" mc:variant="IN THE WORKS">
@@ -399,17 +393,17 @@
 
 				<!-- COLUMN WRAP -->
 				<div class="column-wrap">
-				
+
 					<div class="column">
 						<table align="left">
 							<tr>
-								<td>				
-									<img mc:edit="in-the-works-image" src="img/test-image2.jpg" />
+								<td>
+									<img mc:edit="in-the-works-image" src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" alt="27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg.jpg" />
 								</td>
 							</tr>
 						</table>
 					</div>
-				
+
 					<div class="column">
 						<table align="left" class="section-copy">
 							<tr>
@@ -427,13 +421,13 @@
 							</tr>
 						</table>
 					</div>
-					
-					<div class="clear"></div>			
 
-				</div><!-- /COLUMN WRAP -->	
+					<div class="clear"></div>
+
+				</div><!-- /COLUMN WRAP -->
 			</div>
 			<!-- END repeatable IN THE WORKS -->
-			
+
 			<!-- START repeatable DOING GOOD-->
 			<div class="news-block-doing-good" mc:repeatable="news_block" mc:variant="DOING GOOD">
 				<div class="content">
@@ -448,17 +442,17 @@
 
 				<!-- COLUMN WRAP -->
 				<div class="column-wrap">
-				
+
 					<div class="column">
 						<table align="left">
 							<tr>
-								<td>				
-									<img mc:edit="doing-good-image" src="img/test-image.jpg" />
+								<td>
+									<img mc:edit="doing-good-image" src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" alt="27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" />
 								</td>
 							</tr>
 						</table>
 					</div>
-				
+
 					<div class="column">
 						<table align="left" class="section-copy">
 							<tr>
@@ -476,10 +470,10 @@
 							</tr>
 						</table>
 					</div>
-					
-					<div class="clear"></div>			
 
-				</div><!-- /COLUMN WRAP -->	
+					<div class="clear"></div>
+
+				</div><!-- /COLUMN WRAP -->
 			</div><!-- END repeatable IN THE WORKS -->
 
 			<!-- START repeatable AROUND TOWN-->
@@ -488,7 +482,7 @@
 					<table>
 						<tr>
 							<td>
-								<p><img mc:edit="around-town-image" src="img/test-image2.jpg" /></p>
+								<p><img mc:edit="around-town-image" src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" alt="27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" /></p>
 							</td>
 						</tr>
 					</table>
@@ -517,63 +511,124 @@
 			</div>
 			<!-- END repeatable AROUND TOWN-->
 
+			  <!-- START repeatable FRESH FIREBELLY-->
+			  <div class="news-block-fresh-firebelly" mc:repeatable="news_block" mc:variant="FRESH FIREBELLY">
+			    <div class="content">
+			      <table class="section-header">
+			        <tr>
+			          <td>
+			            FRESH AT FIREBELLY
+			          </td>
+			        </tr>
+			      </table>
+			      <table>
+			        <tr>
+			          <td>
+			            <p><img src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" alt="27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" mc:edit="freshfirebellyimage">
+			          </p>
+			        </td>
+			      </tr>
+			    </table>
+			    <table class="section-copy">
+			      <tr>
+			        <td mc:edit="freshfirebellycopy">
+			          <h1>Website Updates!</h1>
+			          <p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
+			          <p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
+			          <p class="callout">
+			            <a href="#">Call to Action Would Go Here</a>
+			          </p>
+			        </td>
+			      </tr>
+			    </table>
+			  </div>
+			</div>
+			<!-- END repeatable FRESH FIREBELLY-->
+
+			  <!-- START repeatable ANNOUNCEMENT-->
+			  <div class="news-block-around-town" mc:repeatable="news_block" mc:variant="GENERAL ANNOUNCEMENT">
+			    <div class="content">
+			      <table>
+			        <tr>
+			          <td>
+			            <p><img src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" alt="27ad42d6-8cdf-43a1-a552-551305bb0e9e.jpg" mc:edit="announcement-image">
+			          </p>
+			        </td>
+			      </tr>
+			    </table>
+			    <table class="section-header">
+			      <tr>
+			        <td mc:edit="announcementlabel">
+			          ANNOUNCEMENT LABEL
+			        </td>
+			      </tr>
+			    </table>
+			    <table class="section-copy">
+			      <tr>
+			        <td mc:edit="announcementcopy">
+			          <h1>Dollop Coffee &amp; Tea</h1>
+			          <p>Remember way back in November when we announced our collaboration with CanTV, Chicago’s public access cable television? Well after 8 months of hard work, we’re happy to announce the launch of their new fully responsive website, helping to further their excellent history in Chicago.</p>
+			          <p>The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels that updates simply by syncing with a csv  le, and most important, a greatly improved user experience that has already garnered much praise from their wide ranging audience. The site features a live feed on their homepage that automatically turns on whenever news breaks, a beautiful weekly schedule for all 5 channels.</p>
+			          <p class="callout">
+			            <a href="#">Call to Action Would Go Here</a>
+			          </p>
+			        </td>
+			      </tr>
+			    </table>
+			  </div>
+			</div>
+			<!-- END repeatable ANNOUNCEMENT -->
+
 		</td>
-		<td></td>
+		<td class="spacer"></td>
 	</tr>
 </table>
 
 <!-- FOOTER -->
-<table class="footer-f" background="img/footer-f-bg.png">
-	<tr>
-		<td align="center">
-			<table class="wrap">
-			<tr><td><img src="img/footer-logo-f@4x.png" class="logo-f"></td></tr>
-			</table>
-		</td>
-	</tr>
-</table>
 <table class="footer-wrap">
 	<tr>
-		<td></td>
+		<td class="spacer"></td>
 		<td class="container">
 
 			<!-- COLUMN WRAP -->
 			<div class="column-wrap">
-			
+
 				<div class="column">
 					<table align="left">
 						<tr>
 							<td>
-								<img src="img/footer-logo@4x.png" alt="Firebelly" class="logo">
-								<img src="img/endash.png" class="endash">
-								<a target="_blank" href="https://goo.gl/maps/im4YsDbLnFH2">2701 W THOMAS ST<br> CHICAGO IL 60622</a><br>
+								<img src="https://mcusercontent.com/1932df0a20bd716fbbecce7db/images/70907a18-6013-4cb9-93d8-406cb74eeae7.png" alt="Firebelly" class="logo">
+								<img src="https://gallery.mailchimp.com/1932df0a20bd716fbbecce7db/images/e3398d64-826d-43e5-8228-e3075768b4b2.png" class="endash">
+								<a target="_blank" href="https://goo.gl/maps/im4YsDbLnFH2">1402 N WESTERN AVE<br> CHICAGO IL 60622</a><br>
 								<a target="_blank" href="mailto:info@firebellydesign.com">INFO@FIREBELLYDESIGN.COM</a><br>
 								<a target="_blank" href="tel:7734893200">773 489 3200</a><br>
 							</td>
 						</tr>
 					</table>
 				</div>
-			
+
 				<div class="column">
 					<table align="right" class="footer-social">
-						<tr>
-							<td>
-								<a target="_blank" href="https://www.facebook.com/firebellydesign">FACEBOOK</a><br>
-								<a target="_blank" href="https://twitter.com/firebellydesign">TWITTER</a><br>
-								<a target="_blank" href="https://www.instagram.com/firebellydesign/">INSTAGRAM</a><br>
-								<a target="_blank" href="http://www.firebellydesign.com/work">WEB</a><br><br>
-								<a target="_blank" href="*|FORWARD|*">SHARE</a> <a target="_blank" href="*|SHARELINK:TWITTER|*"><img style="width: 20px;" src="img/twitter.png" alt="Twitter" /></a>
-								<a target="_blank" href="*|SHARELINK:FACEBOOK|*"><img style="width: 20px;" src="img/facebook.png" alt="Facebook" /></a>
-								<a target="_blank" href="*|FORWARD|*"><img style="width: 20px;" src="img/email.png" alt="Email" /></a><br>
-								<br><a href="*|UNSUB|*">UNSUBSCRIBE</a><br>
-							</td>
-						</tr>
+					  <tr>
+					    <td>
+					      <a target="_blank" href="https://www.instagram.com/firebellydesign/">INSTAGRAM</a>
+					      <br><a target="_blank" href="https://twitter.com/firebellydesign">TWITTER</a>
+					      <br><a target="_blank" href="https://www.linkedin.com/company/firebelly-design/">LINKEDIN</a>
+					      <br><a target="_blank" href="https://www.behance.net/firebelly">BEHANCE</a>
+					      <br>
+					      <br><a target="_blank" href="*|FORWARD|*">SHARE</a> <a target="_blank" href="*|SHARELINK:TWITTER|*"><img style="width: 20px;" src="https://mcusercontent.com/1932df0a20bd716fbbecce7db/images/8975fed6-d99b-450b-9204-c54e8c58360d.png" alt="Twitter"></a>
+					      <a target="_blank" href="*|SHARELINK:FACEBOOK|*"><img style="width: 20px;" src="https://mcusercontent.com/1932df0a20bd716fbbecce7db/images/7c24003c-ac14-46c7-8571-54b440508c33.png" alt="Facebook"></a>
+					      <a target="_blank" href="*|FORWARD|*"><img style="width: 20px;" src="https://mcusercontent.com/1932df0a20bd716fbbecce7db/images/65a84443-29a9-457e-95f5-0632ff863d9d.png" alt="Email"></a>
+					      <br>
+					      <a href="*|UNSUB|*" style="display:inline-block;margin-top:9px;">UNSUBSCRIBE</a>
+					    </td>
+					  </tr>
 					</table>
 				</div>
-				
-				<div class="clear"></div>			
 
-			</div><!-- /COLUMN WRAP -->	
+				<div class="clear"></div>
+
+			</div><!-- /COLUMN WRAP -->
 
 		</td>
 		<td></td>
